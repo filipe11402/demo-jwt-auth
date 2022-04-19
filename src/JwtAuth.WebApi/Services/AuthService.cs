@@ -41,7 +41,7 @@ namespace JwtAuth.WebApi.Services
 
             return dbUSer.Password == password ?
                 await _tokenService.GetTokenAsync(username, dbUSer.Role) : 
-                string.Empty;
+                null;
         }
     }
 }
